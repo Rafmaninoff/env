@@ -95,8 +95,7 @@ fi
 #--------------------------------------#
 
 #---# Jewe's autoclicker #---#
-alias rightclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 8 --btp Right"
-alias leftclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 9 --btp Left"
+	[[ $DISPLAY ]] && alias rightclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 8 --btp Right"; alias leftclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 9 --btp Left"
 #----------------------------#
 
 #Mia's Unilookup thingy
