@@ -1,0 +1,40 @@
+clear lock
+clear shift
+clear mod1
+clear mod2
+clear mod3
+clear mod4
+clear mod5
+
+keycode 9  = NoSymbol Caps_Lock  NoSymbol NoSymbol NoSymbol
+keycode 23 = Escape NoSymbol Escape NoSymbol Escape
+keycode 37 = Tab ISO_Left_Tab Tab ISO_Left_Tab Tab ISO_Left_Tab
+
+add lock = Caps_Lock
+add control = Control_L
+add shift = Shift_L Shift_R
+add mod1 = Alt_L
+add mod2 = Num_Lock
+add mod3 = Hyper_L
+add mod4 = Super_L Super_R
+add mod5 = Mode_switch ISO_Level3_Shift
+
+
+! keycode  79 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  80 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  81 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  83 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  84 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  85 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  87 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  88 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  89 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  90 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  63 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  82 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  86 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode  91 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode 104 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode 106 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode 125 = NoSymbol NoSymbol NoSymbol NoSymbol
+! keycode 129 = NoSymbol NoSymbol NoSymbol NoSymbol

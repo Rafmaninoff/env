@@ -81,6 +81,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 	au BufWritePost * call MakeScriptsExecutable()
 
+"do certain stuff with certain files
+	au BufWritePost ~/.bmdirs,~/.bmfiles !shortcuts 
+
 "split movement
 	nnoremap <C-h> <C-w>h
 	nnoremap <C-j> <C-w>j

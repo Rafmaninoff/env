@@ -300,7 +300,7 @@ exec_always ~/dotfiles/scripts/wallpaperset.py
 
 #set xkb and xmodmap keyboard options
 exec_always --no-startup-id numlockx on
-exec_always sh -c "setxkbmap -layout es -variant rafsymprogdv -option caps:ctrl_modifier; sleep 1; xmodmap ~/dotfiles/Xmodmap"
+exec_always sh -c "setxkbmap -layout es -variant rafsymprogdv -option caps:ctrl_modifier; sleep 1; xmodmap ~/.Xmodmap"
 
 #use powertop to perform an automatic tuneup to increase battery life
 exec sudo powertop --auto-tune

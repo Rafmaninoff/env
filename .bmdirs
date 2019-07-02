@@ -8,5 +8,5 @@ vv	~/Videos
 sc	~/dotfiles/scripts
 T	/tmp
 Sf	/mnt/slowfiles
-mcin 	~/.local/share/multimc/instances
+mcin	~/.local/share/multimc/instances
 
