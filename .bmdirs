@@ -1,0 +1,12 @@
+h	~/
+d	~/Downloads
+D	~/Documents
+m	~/Music
+pp	~/Pictures
+vv	~/Videos
+.f	~/dotfiles
+sc	~/dotfiles/scripts
+T	/tmp
+Sf	/mnt/slowfiles
+mcin 	~/.local/share/multimc/instances
+

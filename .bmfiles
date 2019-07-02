@@ -1,0 +1,12 @@
+vi	~/dotfiles/neovim/init.vim
+zrc	~/dotfiles/zsh/zshrc
+za	~/dotfiles/zsh/aliases.zsh
+zpa	~/dotfiles/zsh/private_aliases.zsh
+zf	~/dotfiles/zsh/functions.zsh
+i3	~/dotfiles/i3/config
+i3b	~/dotfiles/i3/i3blocks.conf
+pr	~/dotfiles/profile
+bd	~/dotfiles/bmdirs
+bf	~/dotfiles/bmfiles
+nbu	~/dotfiles/newsboat/urls
+nbc	~/dotfiles/newsboat/config

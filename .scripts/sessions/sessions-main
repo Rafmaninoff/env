@@ -1,0 +1,8 @@
+#!/bin/bash
+
+i3-msg 'exec firefox'
+i3-msg 'exec telegram-desktop'
+i3-msg 'exec discord'
+i3-msg 'exec slack'
+i3-msg 'exec multimc'
+i3-msg 'exec steam'

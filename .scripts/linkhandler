@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#script takes a url, then does an appropriate action:
+#if it's an image, it will open it in sxiv
+#if a video or gif, view it in mpv
+#if a music file or pdf, it will download 
+#else open link in #BROWSER
+
+#if no url is given, opens browser, for using the script as $BROWSER
+[ -z "$1" ] && { "$BROWSER"; exit; }
+
+case "$1" in
+	*mkv|*webm|*mp4|*youtube.com/watch*|*youtube.com/playlist*|*youtu.be*|*hooktube.com*)
+		setsid mpv --input-ipc-server=/tmp/mpvsoc$(date +%s) -quiet "$1" >/dev/null 2>&1 & ;;
+	*png|*jpg|*jpe|*jpeg|*gif)
+		curl -sL "$1" > "/tmp/$(echo "$1" | sed "s/.*\///")" && sxiv -a "/tmp/$(echo "$1" | sed "s/.*\///")"  >/dev/null 2>&1 & ;;
+	*mp3|*flac|*opus|*mp3?source*)
+		setsid tsp curl -LO "$1" >/dev/null 2>&1 & ;;
+	*)
+		if [ -f "$1" ]; then "$TERMINAL" -e "$EDITOR $1"
+else setsid "$BROWSER" "$1" >/dev/null 2>&1 & fi ;;	
+
+esac

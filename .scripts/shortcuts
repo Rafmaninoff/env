@@ -1,0 +1,16 @@
+#!/bin/bash
+#input file locations
+bmdirs="$HOME/.bmdirs"
+bmfiles="$HOME/.bmfiles"
+
+#output locations.
+shell_shortcuts="$HOME/.zsh/shortcuts.zsh"
+
+#remove and prepare files.
+	printf "# vim: filetype=zsh\n" > "$shell_shortcuts"
+
+#format the bmdirs in the correct format and send it to the corresponding files
+sed "s/\s*#.*$//;/^\s*$/d" $bmdirs | awk '{print "\talias -g \""$1"\"=\"cd "$2"\""}' >> $shell_shortcuts
+
+#format the bmfiles in the correct format and send it to the corresponding files
+sed "s/\s*#.*$//;/^\s*$/d" $bmfiles | awk '{print "\talias \"e"$1"\"=\"$EDITOR "$2"\""}' >> $shell_shortcuts
