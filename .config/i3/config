@@ -268,7 +268,7 @@ bindsym $mod+Shift+Control+l resize grow width 10 px or 10 ppt
 bar {
 	id bar-1
 	position top
-status_command i3blocks -c ~/dotfiles/i3/i3blocks.conf
+status_command i3blocks -c ~/.config/i3/i3blocks.conf
 }
 
 # bar toggle, hide or show
