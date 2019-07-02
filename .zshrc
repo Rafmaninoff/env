@@ -25,8 +25,8 @@ abbrev-alias --init
 
 source ~/.zsh/aliases.zsh
 source ~/.zsh/functions.zsh
-source ~/.zsh/private_aliases.zsh
-source ~/.zsh/shortcuts.zsh
+[[ -f ~/.zsh/private_aliases.zsh ]] && source ~/.zsh/private_aliases.zsh
+[[ -f ~/.zsh/shortcuts.zsh ]] && source ~/.zsh/shortcuts.zsh
 
 #Powerlevel9k configuration
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
