@@ -7,7 +7,7 @@ setopt appendhistory autocd beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-source ~/dotfiles/zsh/completions.zsh
+source ~/.zsh/completions.zsh
 
 source ~/.zplug/init.zsh
 
@@ -23,10 +23,10 @@ zplug load
 
 abbrev-alias --init
 
-source ~/dotfiles/zsh/aliases.zsh
-source ~/dotfiles/zsh/functions.zsh
-source ~/dotfiles/zsh/private_aliases.zsh
-source ~/dotfiles/zsh/shortcuts.zsh
+source ~/.zsh/aliases.zsh
+source ~/.zsh/functions.zsh
+source ~/.zsh/private_aliases.zsh
+source ~/.zsh/shortcuts.zsh
 
 #Powerlevel9k configuration
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
