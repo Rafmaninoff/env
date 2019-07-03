@@ -1,4 +1,4 @@
-export PATH=/usr/lib/ccache/bin/:$PATH:~/bin:~/dotfiles/scripts:~/.local/bin/:~/nativefied/launchers/
+export PATH=/usr/lib/ccache/bin/:$PATH:~/bin:~/.scripts:~/.local/bin/:~/nativefied/launchers/
 
 #---# Nested directory helpers #---#
 abbrev-alias -g "..."="../.."

@@ -5,7 +5,7 @@ m	~/Music
 pp	~/Pictures
 vv	~/Videos
 .f	~/dotfiles
-sc	~/dotfiles/scripts
+sc	~/.scripts
 T	/tmp
 Sf	/mnt/slowfiles
 mcin	~/.local/share/multimc/instances

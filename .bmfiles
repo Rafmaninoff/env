@@ -1,5 +1,5 @@
 vi	~/.config/nvim/init.vim
-zrc	~/.zsh/zshrc
+zrc	~/.zshrc
 za	~/.zsh/aliases.zsh
 zpa	~/.zsh/private_aliases.zsh
 zf	~/.zsh/functions.zsh

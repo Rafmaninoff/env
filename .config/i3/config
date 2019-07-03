@@ -24,7 +24,7 @@ bindsym $mod+Shift+Control+c exec killall compton
 bindsym $mod+Shift+c exec compton -b
 
 #enable touchpad tapping
-exec ~/dotfiles/scripts/touchpad.sh
+exec ~/.scripts/touchpad.sh
 
 #set terminal
 set $term st
@@ -85,7 +85,7 @@ bindsym $mod+Control+space exec i3-dmenu-desktop --dmenu='dmenu -b -i'
 	for_window [instance="weather"] resize set 1152 648
 	for_window [instance="weather"] move scratchpad
 	for_window [instance="weather"] border pixel 5
-	exec --no-startup-id $term -n weather -e ./dotfiles/scripts/weatherterm.sh
+	exec --no-startup-id $term -n weather -e ./.scripts/weatherterm.sh
 	bindsym $mod+Shift+w [instance="weather"] scratchpad show; [instance="weather"] move position center
 #pavucontrol
 	for_window [class="pavucontrol-qt"] floating enable
@@ -261,7 +261,7 @@ bindsym $mod+Shift+Control+l resize grow width 10 px or 10 ppt
 
 #bindsym $mod+r mode "resize"
 
-#exec_always --no-startup-id ~/dotfiles/scripts/polybar_launch.sh
+#exec_always --no-startup-id ~/.scripts/polybar_launch.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -274,7 +274,7 @@ status_command i3blocks -c ~/.config/i3/i3blocks.conf
 # bar toggle, hide or show
 bindsym $mod+m bar mode toggle
 
-bindsym $mod+shift+x exec bash /home/raf/dotfiles/scripts/locki3.sh
+bindsym $mod+shift+x exec bash /home/raf/.scripts/locki3.sh
 
 
 # Pulse Audio controls
@@ -296,7 +296,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #set wallpaper
-exec_always ~/dotfiles/scripts/wallpaperset.py
+exec_always ~/.scripts/wallpaperset.py
 
 #set xkb and xmodmap keyboard options
 exec_always --no-startup-id numlockx on
@@ -313,6 +313,6 @@ bindsym $mod+Shift+p exec ph type --xdotool --tabbed "dmenu -b -i"
 
 exec_always xinput set-prop `xinput | grep -i "synps/2 synaptics touchpad" | cut -d= -f2 | cut -f1` 302 1
 #Ranger shortcuts
-bindsym $mod+r exec $term -e ranger -r ~/dotfiles/ranger/ ~
+bindsym $mod+r exec $term -e ranger  ~
 bindsym $mod+Shift+r exec $term -e sudo ranger /
 
