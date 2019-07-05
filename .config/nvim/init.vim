@@ -38,7 +38,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 		cmap use UltiSnipsEdit
 	Plug 'w0rp/ale'	"Linting engine and lsp client
 		let g:airline#extensions#ale#enabled = 1	
-	Plug 'neoclide/coc.nvim', {'do': '.install.sh nightly'}	"completion manager.
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 	call plug#end()
 
 "basic stuff
