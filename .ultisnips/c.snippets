@@ -1,0 +1,11 @@
+snippet def "#define ..." b
+#define ${1:${VISUAL}}
+$0
+endsnippet
+
+snippet ifndef "#ifndef-#define" b
+#ifndef ${1:symbol}
+#define $1 ${2:value}
+#endif
+endsnippet
+

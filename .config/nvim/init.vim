@@ -33,7 +33,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 		let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 		let g:UltiSnipsEditSplit = 'vertical'
 		let g:UltiSnipsSnippetsDir = "/home/raf/ultisnips"
-		let g:UltiSnipsSnippetDirectories=["/home/raf/ultisnips", "ultisnips"]
+		let g:UltiSnipsSnippetDirectories=["/home/raf/.ultisnips", ".ultisnips"]
 		let g:UltiSnipsUsePythonVersion = 3
 		cmap use UltiSnipsEdit
 	Plug 'w0rp/ale'	"Linting engine and lsp client
