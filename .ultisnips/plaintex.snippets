@@ -5,7 +5,7 @@ snippet template "basic template" b
 \usepackage{graphicx}
 
 \title{${1:Title}}
-\author{$2:`whoami`}
+\author{${2:`whoami`}}
 \date{\today}
 
 
@@ -15,7 +15,7 @@ snippet template "basic template" b
 endsnippet
 
 
-snippet beg "begin{}..end{}" bA
+snippet "\s+beg" "begin{}..end{}" rbA
 \begin{${1:${VISUAL:environment}}}
 	$0
 \end{$1}
