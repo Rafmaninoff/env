@@ -62,5 +62,5 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 xrandr --auto
-exec i3 -c ~/dotfiles/i3/config
+exec i3 
 
