@@ -18,8 +18,10 @@ abbrev-alias -g ".............."="../../../../../../../../../../../../.."
 #---# Arch-Specific #---#
 if [[ -e /usr/bin/pacman ]]; then
 	alias -g pacman="sudo pacman"
+	alias powerpill="sudo powerpill"
 	abbrev-alias -g paci="pacman -S"
 	abbrev-alias -g pacq="pacman -Ss"
+	alias update="sudo pacman -Sy && sudo powerpill -Su && yay && zplug update"
 fi
 #-----------------------#
 
