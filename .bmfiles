@@ -10,3 +10,6 @@ bd	~/.bmdirs
 bf	~/.bmfiles
 nbu	~/.config/newsboat/urls
 nbc	~/.config/newsboat/config
+xr	~/.Xresources
+xrc	~/.xinitrc
+xrc-n	~/.nvidia-xinitrc

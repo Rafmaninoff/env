@@ -61,6 +61,8 @@ setxkbmap -option compose:menu
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
+export CURRENT_GPU="intel"
+
 xrandr --auto
 exec i3 
 

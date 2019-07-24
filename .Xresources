@@ -1,18 +1,13 @@
 !! Transparency (0-1):
 st.alpha: 0.92
 
-Xft.autohint: 0
-Xft.lcdfilter: lcddefault
-Xft.hintstyle: hintslight
-Xft.hinting: 1
-Xft.antialias: 1
-Xft.rgba: rgb
+Xft.dpi: 94
 
 !! Set a default font and font size as below:
 st.font: Monospace-13
 
 ! st.termname: st-256color
- st.borderpx: 0
+st.borderpx: 0
 
 !! Set the background, foreground and cursor colors as below:
 *.background: #282828

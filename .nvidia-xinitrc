@@ -1,0 +1,2 @@
+export CURRENT_GPU="nvidia"
+exec i3

@@ -84,6 +84,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 "do certain stuff with certain files
 	au BufWritePost ~/.bmdirs,~/.bmfiles !shortcuts 
+	au BufWritePost ~/.Xresources !xrdb ~/.Xresources
 
 "split movement
 	nnoremap <C-h> <C-w>h

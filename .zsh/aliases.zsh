@@ -21,7 +21,7 @@ if [[ -e /usr/bin/pacman ]]; then
 	alias powerpill="sudo powerpill"
 	abbrev-alias -g paci="pacman -S"
 	abbrev-alias -g pacq="pacman -Ss"
-	alias update="sudo pacman -Sy && sudo powerpill -Su && yay && zplug update"
+	alias update="sudo pacman -Sy && sudo powerpill -Su && yay && zplug update && nvim +PlugUpdate +qall"
 fi
 #-----------------------#
 
@@ -93,7 +93,7 @@ if [[ -e /usr/bin/optirun ]]; then
 
 #---# Nvidia-prime system specific #---#
 if [[ -e /usr/bin/nvidia-xrun  ]]; then
-	abbrev-alias stxin="startx"
+	abbrev-alias stxin="startx && xrdb -merge ~/.141_dpi"
 	abbrev-alias stxnv="nvidia-xrun i3"
 fi
 #--------------------------------------#
