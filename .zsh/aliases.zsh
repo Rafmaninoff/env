@@ -93,8 +93,9 @@ if [[ -e /usr/bin/optirun ]]; then
 
 #---# Nvidia-prime system specific #---#
 if [[ -e /usr/bin/nvidia-xrun  ]]; then
-	abbrev-alias stxin="startx && xrdb -merge ~/.141_dpi"
-	abbrev-alias stxnv="nvidia-xrun i3"
+	alias stxin="startx && xrdb -merge ~/.141_dpi"
+	alias stxnv="nvidia-xrun"
+	alias stxnvm="export MAINBASE="true" && nvidia-xrun"
 fi
 #--------------------------------------#
 

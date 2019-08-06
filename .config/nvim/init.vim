@@ -32,7 +32,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 		let g:UltiSnipsJumpForwardTrigger = '<tab>'
 		let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 		let g:UltiSnipsEditSplit = 'vertical'
-		let g:UltiSnipsSnippetsDir = "/home/raf/ultisnips"
+		let g:UltiSnipsSnippetsDir = "/home/raf/.ultisnips"
 		let g:UltiSnipsEnableSnipMate = 0
 		let g:UltiSnipsSnippetDirectories=["/home/raf/.ultisnips", ".ultisnips"]
 		let g:UltiSnipsUsePythonVersion = 3
