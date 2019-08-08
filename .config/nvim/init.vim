@@ -73,6 +73,10 @@ call plug#begin('~/.local/share/nvim/plugged')
 	 vnoremap <C-c> "+y
 	 nmap <C-w> "+P
 
+" Compiling
+	 nnoremap <F11> :w <CR> :!fpc -Co -Cr -Miso -gl -FE/tmp/ % && /tmp/%< <CR>
+	 " { TODO: make me more general }"
+
 "automatically make files containing shebang executable
 	fu MakeScriptsExecutable()
 		if getline(1) =~ "^#!"
