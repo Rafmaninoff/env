@@ -307,9 +307,9 @@ exec sudo powertop --auto-tune
 
 #use passhole to integrate passwords into dmenu
 #type just the password
-bindsym $mod+p exec ph type --xdotool "dmenu -b -i -l 10"
+bindsym $mod+p exec ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool "dmenu -b -i -l 10"
 #type the username and the password, separated by a tab
-bindsym $mod+Shift+p exec ph type --xdotool --tabbed "dmenu -b -i -l 10"
+bindsym $mod+Shift+p exec ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool --tabbed "dmenu -b -i -l 10"
 
 exec_always xinput set-prop `xinput | grep -i "synps/2 synaptics touchpad" | cut -d= -f2 | cut -f1` 302 1
 #Ranger shortcuts

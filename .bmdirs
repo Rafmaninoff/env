@@ -8,6 +8,6 @@ vv	~/Videos
 sc	~/.scripts
 T	/tmp
 Sf	/mnt/slowfiles
-fi	~/fing
+fa	~/fing
 mcin	~/.local/share/multimc/instances
 

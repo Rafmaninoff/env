@@ -66,7 +66,7 @@ abbrev-alias -g v="nvim"
 abbrev-alias -g V="sudo -e"
 abbrev-alias S="sudo systemctl"
 abbrev-alias Su="systemctl --user"
-abbrev-alias -f D="pwd"
+abbrev-alias -g -e D="$(pwd)/"
 alias config="/usr/bin/git --git-dir=$HOME/.env/ --work-tree=$HOME"
 #-------------------------#
 
@@ -102,6 +102,10 @@ fi
 #---# Jewe's autoclicker #---#
 	[[ $DISPLAY ]] && alias rightclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 8 --btp Right"; alias leftclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 9 --btp Left"
 #----------------------------#
+
+#passhole
+alias ph="ph --database /home/raf/Dropbox/keepass/passhole.kdbx"
+
 
 #Mia's Unilookup thingy
 function ulookup() { echo $1 | unilookup }

@@ -74,7 +74,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	 nmap <C-w> "+P
 
 " Compiling
-	 nnoremap <F11> :w <CR> :!fpc -Co -Cr -Miso -gl -FE/tmp/ % && /tmp/%< <CR>
+	 au FileType pascal nnoremap <F11> :w <CR> :!fpc -Co -Cr -Miso -gl -FE/tmp/ % <CR> :!/tmp/%< 
 	 " { TODO: make me more general }"
 
 "automatically make files containing shebang executable
