@@ -1,6 +1,11 @@
 snippet "^#!$" "basic template" rbA
 program ${1:`!v expand('%:r:t')`};
-	${2:${VISUAL:(* variables *)}}
+const
+	${2:(* constants *)}
+type
+	${3:(* types *)}
+var
+	${4:(* variables *)}
 
 begin
 	$0
@@ -8,7 +13,23 @@ end.
 endsnippet
 
 snippet vd "variables" wA
-var ${1:${VISUAL:name(s)}} : ${2:type};$0
+var ${1:${VISUAL:name(s)}} : ${2:type}$0
+endsnippet
+
+snippet nd "Normal/parameter declaration" wA
+${1:${VISUAL:name(s)}} : ${2:type}$0
+endsnippet
+
+snippet ad "Array declaration" bA
+${1:name} = array [${2:0}..${3:(final_value)}] of ${4:vartype};
+endsnippet
+
+snippet rd "Range declaration" bA
+${1:name} = ${2:(initial_value)}..${3:(final_value)};
+endsnippet
+
+snippet aad "Array declaration" bA
+var ${1:(name)} : array [${2:(initial_value)..${3:(final_value)}}] of ${4:type};
 endsnippet
 
 snippet cond "Constant" bA
@@ -18,19 +39,19 @@ endsnippet
 snippet if "if" b
 if (${1:condition}) then begin
 	${0:${VISUAL:(*statements*)}}
-end ${2:(* if *)}
+end; ${2:(* if *)}
 endsnippet
 
 snippet el "else" w
 else begin
 	${1:${VISUAL:(*statements*)}}
-end ${2:(* else *)}
+end; ${2:(* else *)}
 endsnippet
 
 snippet eli "else-if" w
 else if (${1:condition}) then begin
 	${0:${VISUAL:(*statements*)}}
-end ${2:(* else-if *)}
+end; ${2:(* else-if *)}
 endsnippet
 
 snippet wln "writeln()" bA
@@ -40,33 +61,33 @@ endsnippet
 snippet for "for..do loop" b
 for ${1:var} := ${2:initial_value} to ${3:final_value} do begin
 	${0:${VISUAL:(*statements*)}}
-end (*for*)
+end; (*for*)
 endsnippet
 
 snippet rep "repeat..until" b
 repeat
 	${0:${VISUAL:(*statements*)}}
-until(${1:condition})
+until(${1:condition});
 endsnippet
 
 snippet whi "while block" b
 while(${1:condition}) do begin
 	${0:${VISUAL:(*statements*)}}
-end
+end; (*while*)
 endsnippet
 
 snippet func "Function block" bA
 function ${1:func}(${2:(*parameters*)}) : ${3:ret_type};
 begin (* function: $1 *)
 	${0:${VISUAL:(* code *)}}
-end (* function: $1 *)
+end; (* function: $1 *)
 endsnippet
 
 snippet proc "Procedure block" bA
-procedure ${1:proc}(${*parameters*)});
+procedure ${1:proc}(${2:(*parameters*)});
 begin (* procedure: $1 *)
 	${0:${VISUAL:(* code *)}}
-end (* procedure: $1 *)
+end; (* procedure: $1 *)
 endsnippet
 
 

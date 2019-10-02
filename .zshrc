@@ -18,7 +18,6 @@ zplug "zsh-users/zsh-syntax-highlighting", as:plugin
 zplug "zsh-users/zsh-history-substring-search"
 zplug "momo-lab/zsh-abbrev-alias"
 zplug "hlissner/zsh-autopair"
-zplug "MichaelAquilina/zsh-auto-notify"
 zplug "sei40kr/zsh-fast-alias-tips", hook-build:"make"
 zplug "Tarrasch/zsh-bd"
 
