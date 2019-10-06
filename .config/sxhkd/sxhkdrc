@@ -1,0 +1,5 @@
+#basic binds
+super + Return
+	$TERMINAL
+super + shift + Return
+	$TERMINAL -e tmux
