@@ -64,5 +64,5 @@ export SSH_AUTH_SOCK
 export CURRENT_GPU="intel"
 
 xrandr --auto
-exec i3 
+exec i3
 
