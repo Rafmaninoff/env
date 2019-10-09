@@ -7,10 +7,6 @@ exec --no-startup-id blueman-applet
 #source the .profile
 exec_always source ~/.profile
 
-#start FCITX autmatically
-exec killall ibus
-exec fcitx
-
 #start a clipboard manager so it actually works properly
 exec xfce4-clipman
 
@@ -52,18 +48,8 @@ font pango:Inconsolata-Bold 11
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# start a terminal
-bindsym $mod+Return exec $term
-
-# start a new tmux window
-bindsym $mod+Shift+Return exec $term -e tmux
-
 # kill focused window
-bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+space exec dmenu_run -b -i
-bindsym $mod+Control+space exec i3-dmenu-desktop --dmenu='dmenu -b -i'
+ bindsym $mod+Shift+q kill
 
 #scratchpad windows
 #simple tmux window for running commands
@@ -112,14 +98,6 @@ assign [ class="Steam" ] $ws4
 assign [ class="MultiMC5" ] $ws4
 assign [ class="dagor2" ] $ws5
 assign [ class="Minecraft (\d+(\.\d+){1,2}|\d{1,2}w([0-4]\d|5[0-3])[a-z])" ] $ws5
-
-#autostart selected applications
-# exec firefox
-# exec discord
-# exec telegram-desktop
-# exec slack
-# exec steam
-
 
 
 # change focus
@@ -298,21 +276,9 @@ bindsym XF86AudioPrev exec playerctl previous
 #set wallpaper
 exec_always ~/.scripts/wallpaperset.py
 
-#set xkb and xmodmap keyboard options
-exec_always --no-startup-id numlockx on
-exec_always sh -c "setxkbmap -layout es -variant rafsymprogdv -option caps:ctrl_modifier; sleep 1; xmodmap ~/.Xmodmap"
-
 #use powertop to perform an automatic tuneup to increase battery life
 exec sudo powertop --auto-tune
 
-#use passhole to integrate passwords into dmenu
-#type just the password
-bindsym $mod+p exec ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool "dmenu -b -i -l 10"
-#type the username and the password, separated by a tab
-bindsym $mod+Shift+p exec ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool --tabbed "dmenu -b -i -l 10"
-
 exec_always xinput set-prop `xinput | grep -i "synps/2 synaptics touchpad" | cut -d= -f2 | cut -f1` 302 1
-#Ranger shortcuts
-bindsym $mod+r exec $term -e ranger  ~
-bindsym $mod+Shift+r exec $term -e sudo ranger /
 
+exec_always pkill -SIGUSR1 sxhkd

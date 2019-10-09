@@ -5,6 +5,7 @@ zpa	~/.zsh/private_aliases.zsh
 zf	~/.zsh/functions.zsh
 i3	~/.config/i3/config
 i3b	~/.config/i3/i3blocks.conf
+sxh	~/.config/sxhkd/sxhkdrc
 pr	~/.profile
 bd	~/.bmdirs
 bf	~/.bmfiles

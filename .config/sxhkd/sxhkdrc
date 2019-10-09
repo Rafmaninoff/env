@@ -3,3 +3,16 @@ super + Return
 	$TERMINAL
 super + shift + Return
 	$TERMINAL -e tmux
+super + space
+	dmenu_run -b -i
+super + control + space
+	i3-dmenu-desktop --dmenu="dmenu -b -i"
+super + r
+	$TERMINAL -e $FILE
+
+#passhole password manager interface
+super + p
+	ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool "dmenu -b -i -l 10"
+super + shift + p
+	ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool --tabbed "dmenu -b -i -l 10"
+
