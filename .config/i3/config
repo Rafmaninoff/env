@@ -1,4 +1,4 @@
-#start the networkmanager applet for connections
+
 exec nm-applet
 
 #start the bluetooth applet
@@ -282,3 +282,5 @@ exec sudo powertop --auto-tune
 exec_always xinput set-prop `xinput | grep -i "synps/2 synaptics touchpad" | cut -d= -f2 | cut -f1` 302 1
 
 exec_always pkill -SIGUSR1 sxhkd
+
+exec_always setxkbmap -layout es -option ctrl:swapcaps -option compose:menu; sleep 2; xmodmap ~/.Xmodmap

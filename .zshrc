@@ -39,6 +39,9 @@ source ~/.zsh/functions.zsh
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
+#select and edit a file in current directory
+bindkey -s '^v' 'nvim $(fzf)^M'
+
 #Powerlevel9k configuration
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir newline vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)

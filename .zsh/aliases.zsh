@@ -122,5 +122,6 @@ chpwd_functions=(${chpwd_functions[@]} "list_all")
 function gac(){git add . && git commit -m "$*"}
 function gacp(){git add . && git commit -m "$*" && git push --quiet & }
 abbrev-alias -g gp"git push --quiet"
+
 function vf(){ fzf | xargs -r -I % $EDITOR % }
 

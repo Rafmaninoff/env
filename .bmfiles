@@ -12,5 +12,7 @@ bf	~/.bmfiles
 nbu	~/.config/newsboat/urls
 nbc	~/.config/newsboat/config
 xr	~/.Xresources
+xp	~/.xprofile
 xrc	~/.xinitrc
 xrc-n	~/.nvidia-xinitrc
+

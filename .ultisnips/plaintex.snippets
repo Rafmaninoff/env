@@ -13,6 +13,12 @@ snippet "template" "basic template" rb
 \end{document}
 endsnippet
 
+snippet beg "begin" wA
+\begin{${1:environment}}
+	${2:${VISUAL:}}
+\end{$1}
+endsnippet
+
 snippet "enum" "Enumerate" rbA
 \begin{enumerate}
 	\item $0
@@ -25,7 +31,7 @@ snippet "item" "Itemize" rbA
 \end{itemize}
 endsnippet
 
-snippet "ti" "Individual item" rwA
+snippet ti "Individual item" wA
 \item ${0:${VISUAL:}}
 endsnippet
 

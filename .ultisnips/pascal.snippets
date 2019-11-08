@@ -1,12 +1,6 @@
 snippet "^#!$" "basic template" rbA
 program ${1:`!v expand('%:r:t')`};
-const
-	${2:(* constants *)}
-type
-	${3:(* types *)}
-var
-	${4:(* variables *)}
-
+	${2:${VISUAL:(*const-type-var block*)}}
 begin
 	$0
 end.
@@ -30,6 +24,12 @@ endsnippet
 
 snippet aad "Array declaration" bA
 var ${1:(name)} : array [${2:(initial_value)..${3:(final_value)}}] of ${4:type};
+endsnippet
+
+snippet red "Record declaration" bA
+${1:name} = record
+	${2:${VISUAL:(*fields*)}}
+end;$0
 endsnippet
 
 snippet cond "Constant" bA
