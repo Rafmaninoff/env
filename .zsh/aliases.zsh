@@ -66,7 +66,7 @@ abbrev-alias -g v="nvim"
 abbrev-alias -g V="sudo -e"
 abbrev-alias S="sudo systemctl"
 abbrev-alias Su="systemctl --user"
-abbrev-alias -g -e D="$(pwd)/"
+abbrev-alias -g -e di="$(pwd)/"
 alias config="/usr/bin/git --git-dir=$HOME/.env/ --work-tree=$HOME"
 #-------------------------#
 

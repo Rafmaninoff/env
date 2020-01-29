@@ -94,10 +94,10 @@ assign [ class="Firefox" ] $ws1
 assign [ class="discord" ] $ws2
 assign [ class="TelegramDesktop" ] $ws2
 assign [ class="Slack" ] $ws3
-assign [ class="Steam" ] $ws4
-assign [ class="MultiMC5" ] $ws4
-assign [ class="dagor2" ] $ws5
-assign [ class="Minecraft (\d+(\.\d+){1,2}|\d{1,2}w([0-4]\d|5[0-3])[a-z])" ] $ws5
+assign [ class="Steam" ] $ws6
+assign [ class="MultiMC5" ] $ws6
+assign [ class="dagor2" ] $ws7
+assign [ class="Minecraft (\d+(\.\d+){1,2}|\d{1,2}w([0-4]\d|5[0-3])[a-z])" ] $ws7
 
 
 # change focus

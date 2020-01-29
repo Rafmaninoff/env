@@ -1,5 +1,3 @@
-export TERM="st-256color"
-
 #enable colours
 autoload -U colors && colors
 
@@ -23,7 +21,6 @@ zplug "zsh-users/zsh-syntax-highlighting", as:plugin
 zplug "zsh-users/zsh-history-substring-search"
 zplug "momo-lab/zsh-abbrev-alias"
 zplug "hlissner/zsh-autopair"
-zplug "sei40kr/zsh-fast-alias-tips", hook-build:"make"
 zplug "Tarrasch/zsh-bd"
 
 zplug load
