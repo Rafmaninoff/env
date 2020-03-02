@@ -12,7 +12,7 @@ super + r
 
 #passhole password manager interface
 super + p
-	ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool "dmenu -b -i -l 10"
+	ph --no-password --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool "dmenu -b -i -l 10"
 super + shift + p
-	ph --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool --tabbed "dmenu -b -i -l 10"
+	ph --no-password --database /home/raf/Dropbox/keepass/passhole.kdbx type --xdotool --tabbed "dmenu -b -i -l 10"
 

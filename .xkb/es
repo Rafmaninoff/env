@@ -470,7 +470,7 @@ key <AD01> { [semicolon, colon, diaeresis, NoSymbol] };
 key <AD02> { [comma, less, guillemotleft, U2039] };
 key <AD03> { [period, greater, guillemotright, U203A] };
 key <AD04> { [p, P, thorn, THORN] };
-key <AD05> { [y, Y, NoSymbol, NoSymbol] };
+key <AD05> { [y, Y, backslash, bar] };
 key <AD06> { [f, F, UFDFA, NoSymbol] };
 key <AD07> { [g, G, NoSymbol, NoSymbol] };
 key <AD08> { [c, C, uparrow, NoSymbol] };

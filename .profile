@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export PATH="/usr/lib/ccache/bin/:$PATH:~/bin:$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':'):~/.local/bin:~/.cargo/bin/"
+export PATH="/usr/lib/ccache/bin/:$PATH:/home/$USER/bin:$(du $HOME/.scripts/ | cut -f2 | tr '\n' ':')/home/$USER/.local/bin:/home/$USER/.cargo/bin/"
 #Ensure the qt5 theming can be controlled by qt5ct.
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
