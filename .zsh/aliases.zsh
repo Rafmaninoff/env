@@ -21,7 +21,7 @@ if [[ -e /usr/bin/pacman ]]; then
 	alias powerpill="sudo powerpill"
 	abbrev-alias -g paci="pacman -S"
 	abbrev-alias -g pacq="pacman -Ss"
-	alias update="sudo pacman -Sy && sudo powerpill -Su && yay && zplug update && nvim +PlugUpdate +qall"
+	alias update="sudo pacman -Sy && sudo powerpill -Su && pikaur -Syu && zplug update && nvim +PlugUpdate +qall"
 fi
 #-----------------------#
 
