@@ -57,7 +57,7 @@ floating_modifier $mod
 	for_window [instance="dropdown"] resize set 1152 648
 	for_window [instance="dropdown"] move scratchpad
 	for_window [instance="dropdown"] border pixel 5
-	exec --no-startup-id $term -n "dropdown" -e tmux
+	exec --no-startup-id $term -n "dropdown"  -f mono:pixelsize=14
 	bindsym $mod+u [instance="dropdown"] scratchpad show; [instance="dropdown"] move position center
 #terminal running R for quick maths
 	for_window [instance="maths"] floating enable
