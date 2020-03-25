@@ -4478,6 +4478,15 @@
         </variant>
         <variant>
           <configItem>
+            <name>rafkbdvpon</name>
+            <description>Raf's programmer dvorak with ordered numbers</description>
+            <languageList>
+              <iso639Id>cat</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
             <name>cyrillicrafsymprogdv</name>
 	    <description>Cyrillic phonetic Dvorak (Raf's)</description>
             <languageList>
