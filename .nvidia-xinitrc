@@ -1,7 +1,4 @@
 #!/usr/bin/env sh
 
 export CURRENT_GPU="nvidia"
-
-[ -f "$HOME/.xprofile" ] && . ~/.xprofile
-
-exec i3
+source $HOME/.initrc
