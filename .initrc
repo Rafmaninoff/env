@@ -19,7 +19,14 @@ export SSH_AUTH_SOCK
 [ -f "$HOME/.xprofile" ] && . ~/.xprofile
 
 #start applications
-flameshot &
+nm-applet &				#networkManager
+xmousepasteblock &		
+xfce4-clipman &			#clipboard manager
+blueman-applet &		#bluetooth
+dunst &					#notifications
+flameshot &				#screenshot tool
+compton -b &			#compositor
+sudo powertop --auto-tune & #power manager
 
 #actually start the DE/WM
 xrandr --auto

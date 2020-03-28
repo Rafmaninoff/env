@@ -10,7 +10,9 @@ export VISUAL="nvim"
 export TERMINAL="st"
 export BROWSER="firefox"
 export READER="zathura"
-	export RANGER_LOAD_DEFAULT_RC="FALSE"
 export FILE="ranger"
+	export RANGER_LOAD_DEFAULT_RC="FALSE"
+
+[[ -f ~/.secret_profile ]] && source ~/.secret_profile
 
 

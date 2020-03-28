@@ -46,7 +46,7 @@ if [[ -e /usr/bin/snap ]]; then alias snap="sudo snap"; fi #snap alias
 #---# General aliases #---#
 alias visudo="sudo visudo"
 abbrev-alias -g s="sudo"
-abbrev-alias -g md="mkdir -pv"
+abbrev-alias md="mkdir -pv"
 function mdc(){ mkdir -pv $1 && cd $1 }
 alias l="ls --color=always --group-directories-first"
 alias ll="ls -lh --color=always --group-directories-first"
@@ -93,7 +93,7 @@ if [[ -e /usr/bin/optirun ]]; then
 
 #---# Nvidia-prime system specific #---#
 if [[ -e /usr/bin/nvidia-xrun  ]]; then
-	alias stxin="startx && xrdb -merge ~/.141_dpi"
+	alias stxin="startx"
 	alias stxnv="nvidia-xrun"
 	alias stxnvm="export MAINBASE="true" && nvidia-xrun"
 fi
