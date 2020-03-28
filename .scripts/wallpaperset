@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+#takes a directory and uses `feh` to select one of them as a wallpaper at random.
+
+find "$1"  | sort -R | head -n1 | xargs feh --bg-scale
