@@ -27,6 +27,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tpope/vim-commentary'
 	Plug 'jpalardy/vim-slime'	"throw around text to terminals for quick debugging.
 	Plug 'PotatoesMaster/i3-vim-syntax'
+	Plug 'baskerville/vim-sxhkdrc' "sxhkdrc syntax file
 	Plug 'SirVer/ultisnips'
 		let g:UltiSnipsExpandTrigger = '<tab>'
 		let g:UltiSnipsJumpForwardTrigger = '<tab>'
@@ -39,13 +40,14 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'w0rp/ale'	"Linting engine and lsp client
 		let g:airline#extensions#ale#enabled = 1	
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+		
 	Plug 'lervag/vimtex'	"LaTeX plugin
 		let g:vimtex_compiler_progname = 'nvr'
 		let g:tex_flavor='latex'
 		let g:vimtex_view_method='zathura'
 		let g:vimtex_quickfix_mode=0
 		set conceallevel=1
-		let g:tex_conceal='abdmg'
+		let g:tex_conceal='abmgs'
 	Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 		let g:livepreview_previewer = 'zathura'
 	call plug#end()
@@ -64,6 +66,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	set scrolloff=5
 	set nohlsearch
 	set noshowmode 			" showing the mode is redundant with airline
+	set tabstop=4
+	set softtabstop=4
+	set shiftwidth=4
 	let mapleader = ","
 	let leader = ","
 	nnoremap Q <nop> 		" avoid switching to ex mode
@@ -76,6 +81,11 @@ call plug#begin('~/.local/share/nvim/plugged')
 	set termguicolors
 	colorscheme gruvbox
 	set background=dark
+	"Always show the signs column
+	set signcolumn=yes
+	"shorten update times
+	set updatetime=300
+
 
 "copying and pasting from system clipboard.
 	 vnoremap <C-c> "+y
