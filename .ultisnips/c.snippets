@@ -1,11 +1,47 @@
-snippet def "#define ..." b
-#define ${1:${VISUAL}}
+snippet def "#define" bA
+#define $1
+endsnippet
+
+snippet fund "function definition" bA
+${1:void} ${2:f}($3){
+	${4:${VISUAL}}
+}
 $0
 endsnippet
 
-snippet ifndef "#ifndef-#define" b
-#ifndef ${1:symbol}
-#define $1 ${2:value}
-#endif
+snippet while "while" bA
+while(${1:cond}){
+	${2:${VISUAL:instr}}
+}
+$0
 endsnippet
 
+snippet for "for loop" bA
+for(${1:decl}; ${2:cond} ; ${3:incr}){
+	${4:${VISUAL}}
+}
+$0
+endsnippet
+
+#FIXME
+snippet '([\s*\}])(e?)if' "if" rtA
+`!p snip.rv = f"{match.group(1)}" if match.group(2) == '' else f"{match.group(1)}else "`if(${1:cond}){
+`!p snip.rv = x = match.group(1).replace('}', '')`	${2:${VISUAL:instr}}
+} $0
+endsnippet
+
+snippet '([\s*\}])el' "else" rA
+`!p snip.rv = f"{match.group(1)}"`else {
+	${1:${VISUAL}}
+} $0
+endsnippet
+
+snippet 'inc(["<])' "include" rbA
+#include `!p snip.rv = match.group(1)`$1`!p snip.rv = match.group(1) if match.group(1) == "\"" else ">"` $0
+endsnippet
+
+snippet struct "struct" bA
+struct ${1:name} {
+${2:${VISUAL:members}}
+}; $0
+endsnippet

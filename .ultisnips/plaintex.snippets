@@ -22,6 +22,8 @@ snippet "template" "basic template" rb
 \usepackage[utf8]{inputenc}
 \usepackage[UKenglish]{babel}
 \usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{esint}
 
 \title{${1:Title}}
 \author{${2:`whoami`}}
@@ -148,8 +150,8 @@ snippet td "(.)^{something)}" iA
 endsnippet
 
 context "math()"
-snippet sq "\sqrt{.)}" iA
-\sqrt{${1:${VISUAL}}}$0
+snippet '(\d?)sq' "\sqrt{.)}" irA
+\sqrt`!p snip.rv = '' if match.group(1) == '' else f"[{match.group(1)}]"`{${1:${VISUAL}}}$0
 endsnippet
 
 context "math()"
@@ -294,9 +296,10 @@ snippet conj "conjugate" iA
 \overline{$1}$0
 endsnippet
 
+
 context "math()"
-snippet '(\-?\d?)ddr "derivative (euler notation)" iA
-D`!p snip.rv = '' if match.group(1) == '' else f"^{{{match.group(1)}}}"`_{${1:x}}\: $0
+snippet '(\-?\d?)ddr' "derivative (euler notation)" irA
+D`!p snip.rv = ''  if match.group(1) == '' else f"^{{{match.group(1)}}}" `_{${1:x}}\: $0
 endsnippet
 
 context "math()"
@@ -355,8 +358,13 @@ snippet xx "cross" iA
 endsnippet
 
 context "math()"
-snippet ** "cdot" iA
+snippet c. "cdot" iA
 \cdot
+endsnippet
+
+context "math()"
+snippet ... "\ldots" iA
+\ldots 
 endsnippet
 
 context "math()"
@@ -366,7 +374,7 @@ endsnippet
 
 context "math()"
 snippet lim "limit" w
-\lim_{${1:x}} \to ${2:\infty}} $0
+\lim_{${1:x}} \to {${2:\infty}} $0
 endsnippet
 
 context "math()"
@@ -401,47 +409,47 @@ endsnippet
 
 context "math()"
 snippet cc "subset" iA
-\subset
+\subset 
 endsnippet
 
 context "math()"
 snippet notin "not in" iA
-\not\in
+\not\in 
 endsnippet
 
 context "math()"
 snippet inn "in" iA
-\in
+\in 
 endsnippet
 
 context "math()"
 snippet NN "naturals" iA
-\N
+\N 
 endsnippet
 
 context "math()"
 snippet RR "reals" iA
-\R
+\R 
 endsnippet
 
 context "math()"
 snippet QQ "quotients" iA
-\Q
+\Q 
 endsnippet
 
 context "math()"
 snippet ZZ "wholes" iA
-\Z
+\Z 
 endsnippet
 
 context "math()"
 snippet CC "complex" iA
-\C
+\C 
 endsnippet
  
 context "math()"
 snippet OO "emptyset" iA
-\O
+\O 
 endsnippet
 context "math()"
 snippet HH "H" iA
@@ -488,3 +496,7 @@ snippet -> "to" iA
 \to
 endsnippet
 
+context "math()"
+snippet tt "text" iA
+\text{${1:${VISUAL}}} $0
+endsnippet
