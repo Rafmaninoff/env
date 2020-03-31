@@ -17,9 +17,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 		nnoremap <leader>a :NERDTreeToggle<cr>
 	"tmux integration
 	Plug 'christoomey/vim-tmux-navigator'
-	"distraction-free writing in vim
-	Plug 'junegunn/goyo.vim'
-		nnoremap <F3>f :goyo \| set linebreak<cr>
+	Plug 'junegunn/goyo.vim' "distraction-free writing in vim
+		nnoremap <F3>f :goyo<CR>
 	Plug 'vim-scripts/vim-auto-save'
 		let g:auto_save_silent = 1
 "programming-related
@@ -38,9 +37,8 @@ call plug#begin('~/.local/share/nvim/plugged')
 		let g:UltiSnipsUsePythonVersion = 3
 		cmap use UltiSnipsEdit
 	Plug 'w0rp/ale'	"Linting engine and lsp client
-		let g:airline#extensions#ale#enabled = 1	
+		let g:airline#extensions#ale#enabled = 1
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-		
 	Plug 'lervag/vimtex'	"LaTeX plugin
 		let g:vimtex_compiler_progname = 'nvr'
 		let g:tex_flavor='latex'
@@ -63,6 +61,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	syntax on
 	filetype plugin indent on
 	set encoding=utf-8
+	colorscheme gruvbox "colourscheme
 	set scrolloff=5
 	set nohlsearch
 	set noshowmode 			" showing the mode is redundant with airline
@@ -79,21 +78,25 @@ call plug#begin('~/.local/share/nvim/plugged')
 	au FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 	set splitbelow splitright	"splits open to the bottom and right"
 	set termguicolors
-	colorscheme gruvbox
 	set background=dark
 	"Always show the signs column
 	set signcolumn=yes
 	"shorten update times
 	set updatetime=300
+	nnoremap c "_c
+	set linebreak
 
 
 "copying and pasting from system clipboard.
 	 vnoremap <C-c> "+y
 	 nmap <C-w> "+P
 
-" Compiling
-	 au FileType pascal nnoremap <F11> :w <CR> :!fpc -Co -Cr -Miso -gl -FE/tmp/ % <CR> :!/tmp/%< 
-	 " { TODO: make me more general }"
+au BufWritePre * %s/\s\+$//e "delete trailing whitespace on write
+
+"compile the file
+map <leader>c :w! \| !compiler <c-r>%<CR>
+"open the corresponding output
+map <leader>p :!openout <c-r>%<CR><CR>
 
 "automatically make files containing shebang executable
 	fu MakeScriptsExecutable()
@@ -105,7 +108,7 @@ call plug#begin('~/.local/share/nvim/plugged')
 	au BufWritePost * call MakeScriptsExecutable()
 
 "do certain stuff with certain files
-	au BufWritePost ~/.bmdirs,~/.bmfiles !shortcuts 
+	au BufWritePost ~/.bmdirs,~/.bmfiles !shortcuts
 	au BufWritePost ~/.Xresources !xrdb ~/.Xresources
 
 "split movement
