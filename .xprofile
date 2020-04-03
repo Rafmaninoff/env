@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-setxkbmap -layout es -variant rafsymprogdv -option ctrl:swapcaps -option compose:menu  #keyboard options
+setxkbmap -layout es -variant rafkbdvpon -option ctrl:swapcaps -option compose:menu  #keyboard options
 
 #fcitx block
 export GTK_IM_MODULE=fcitx 
@@ -9,10 +9,3 @@ export QT_QPA_PLATFORMTHEME="qt5ct"
 fcitx &
 
 [ -f "$HOME/.Xmodmap" ] && xmodmap .Xmodmap
-
-numlockx on
-
-sxhkd & #keybinds
-
-
-
