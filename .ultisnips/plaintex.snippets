@@ -17,6 +17,12 @@ def math():
 		return False
 endglobal
 
+global !p
+d = {"]":"[","\}":"\{",")":"(",">":"<"}
+def getLeftBracket(rbracket):
+	return d.get(rbracket)
+endglobal
+
 snippet "template" "basic template" rb
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
@@ -125,7 +131,7 @@ endsnippet
 
 snippet dm "display math" wA
 \[
-${1:${VISUAL}}
+	${1:${VISUAL}}
 \]$0
 endsnippet
 
@@ -164,18 +170,22 @@ snippet compl "complement" iA
 
 endsnippet
 
+priority 99
 snippet '(?<!\\)(alpha|beta|Gamma|gamma|Delta|delta)' "greek letters1" irA
-\\`!p snip.rv = match.group(1)` 
+\\`!p snip.rv = match.group(1)`
 endsnippet
 
+priority 98
 snippet '(?!\\)(zeta|eta|theta|iota|kappa|Lambda|lambda|mu)' "greek letters2" iA
-\\`!p snip.rv = match.group(1)` 
+\\`!p snip.rv = match.group(1)`
 endsnippet
 
+priority 97
 snippet '(?<!\\)(nu|Xi|xi|pi|rho|Sigma|sigma|varsigma|tau)' "greek letters 3" iA
-\\`!p snip.rv = match.group(1)` 
+\\`!p snip.rv = match.group(1)`
 endsnippet
 
+priority 96
 snippet '(?<!\\)(Upsilon|upsilon|Phi|phi|varphi|chi|Psi|psi|Omega|omega)' "greek letters 4" iA
 \\`!p snip.rv = match.group(1)`
 endsnippet
@@ -238,62 +248,32 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '').replace('^', '**').re
 endsnippet
 
 snippet != "notequals" iA
-\neq 
+\neq
 endsnippet
 
 context "math()"
 snippet ceil "ceil" iA
-\left\lceil $1 \right\rceil $0
+\left\lceil ${1:${VISUAL}} \right\rceil $0
 endsnippet
 
 context "math()"
 snippet floor "floor" iA
-\left\lfloor $1 \right\rfloor$0
+\left\lfloor ${1:${VISUAL}} \right\rfloor$0
 endsnippet
 
 context "math()"
-snippet () "left( right)" iA
-\left( ${1:${VISUAL}} \right) $0
+snippet absv "absolute value" iA
+\left\lvert ${1:${VISUAL}} \right\rvert $0
 endsnippet
 
 context "math()"
-snippet lr "left( right)" i
-\left( ${1:${VISUAL}} \right) $0
-endsnippet
-
-context "math()"
-snippet lr( "left( right)" i
-\left( ${1:${VISUAL}} \right) $0
-endsnippet
-
-context "math()"
-snippet lr| "left| right|" i
-\left| ${1:${VISUAL}} \right| $0
-endsnippet
-
-context "math()"
-snippet lr{ "left\{ right\}" i
-\left\\{ ${1:${VISUAL}} \right\\} $0
-endsnippet
-
-context "math()"
-snippet lrb "left\{ right\}" i
-\left\\{ ${1:${VISUAL}} \right\\} $0
-endsnippet
-
-context "math()"
-snippet lr[ "left[ right]" i
-\left[ ${1:${VISUAL}} \right] $0
-endsnippet
-
-context "math()"
-snippet lra "leftangle rightangle" iA
-\left<${1:${VISUAL}} \right>$0
+snippet 'lr([\)\]\}>])' "left-right something" irA
+\\left`!p snip.rv=getLeftBracket(match.group(1))` ${1:${VISUAL}} \\right`!p snip.rv=match.group(1)` $0
 endsnippet
 
 context "math()"
 snippet conj "conjugate" iA
-\overline{$1}$0
+\overline{$1} $0
 endsnippet
 
 
@@ -324,37 +304,37 @@ endsnippet
 
 context "math()"
 snippet ooo "\infty" iA
-\infty 
+\infty
 endsnippet
 
 context "math()"
 snippet eee "varepsilon" iA
-\varepsilon 
+\varepsilon
 endsnippet
 
 context "math()"
 snippet <= "leq" iA
-\le 
+\le
 endsnippet
 
 context "math()"
 snippet >= "geq" iA
-\ge 
+\ge
 endsnippet
 
 context "math()"
 snippet EE "exists" iA
-\exists 
+\exists
 endsnippet
 
 context "math()"
 snippet AA "forall" iA
-\forall 
+\forall
 endsnippet
 
 context "math()"
 snippet xx "cross" iA
-\times 
+\times
 endsnippet
 
 context "math()"
@@ -364,17 +344,42 @@ endsnippet
 
 context "math()"
 snippet ... "\ldots" iA
-\ldots 
+\ldots
 endsnippet
 
 context "math()"
 snippet dint "definite integral" wA
-\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\,d${4:x}$0
+endsnippet
+
+context "math()"
+snippet uint "indefinite integral" wA
+\int ${1:${VISUAL}} d${2:x} $0
+endsnippet
+
+context "math()"
+snippet sum "sum" wA
+\sum_{${1:n=1}}^{${2:\infty}} ${3:${VISUAL}} $0
+endsnippet
+
+context "math()"
+snippet updownsum "sum2" wA
+\sum\limits_{${1:n=1}}^{${2:\infty}} ${3:${VISUAL}} $0
+endsnippet
+
+context "math()"
+snippet prod "grill" wA
+\prod{${1:n=1}}^{${2:\infty}} ${3:${VISUAL}} $0
+endsnippet
+
+context "math()"
+snippet updownprod "grill2" wA
+\sum\limits_{${1:n=1}}^{${2:\infty}} ${3:${VISUAL}}	$0
 endsnippet
 
 context "math()"
 snippet lim "limit" w
-\lim_{${1:x}} \to {${2:\infty}} $0
+\lim_{${1:x} \to ${2:\infty}} $0
 endsnippet
 
 context "math()"
@@ -398,58 +403,53 @@ snippet ~~ "~" iA
 endsnippet
 
 context "math()"
-snippet set "set" wA
-\left{$1\right} $0
-endsnippet
-
-context "math()"
 snippet || "|" iA
 \mid
 endsnippet
 
 context "math()"
 snippet cc "subset" iA
-\subset 
+\subset
 endsnippet
 
 context "math()"
 snippet notin "not in" iA
-\not\in 
+\not\in
 endsnippet
 
 context "math()"
 snippet inn "in" iA
-\in 
+\in
 endsnippet
 
 context "math()"
 snippet NN "naturals" iA
-\N 
+\N
 endsnippet
 
 context "math()"
 snippet RR "reals" iA
-\R 
+\R
 endsnippet
 
 context "math()"
 snippet QQ "quotients" iA
-\Q 
+\Q
 endsnippet
 
 context "math()"
 snippet ZZ "wholes" iA
-\Z 
+\Z
 endsnippet
 
 context "math()"
 snippet CC "complex" iA
-\C 
+\C
 endsnippet
- 
+
 context "math()"
 snippet OO "emptyset" iA
-\O 
+\O
 endsnippet
 context "math()"
 snippet HH "H" iA
@@ -468,8 +468,8 @@ endsnippet
 
 priority 10
 context "math()"
-snippet "bar" "bar" riA
-\overline{$1}$0
+snippet bar "bar" iA
+\overline{$1} $0
 endsnippet
 
 priority 100

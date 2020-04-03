@@ -69,7 +69,7 @@ endsnippet
 snippet eli "elif block" b
 elif [ ${1:condition} ]; then
 	${0:${VISUAL:\:}}
-	
+
 endsnippet
 
 snippet eeli "elif block (double brackets)" b
@@ -78,4 +78,11 @@ elif [[ ${1:condition} ]]; then
 
 endsnippet
 
+snippet case "case..esac" bA
+case "${1:var}" in
+	${2:${VISUAL}}
+esac
+
+$0
+endsnippet
 
