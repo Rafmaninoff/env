@@ -20,17 +20,20 @@ export SSH_AUTH_SOCK
 
 #start applications
 nm-applet &				#networkManager
-xmousepasteblock &		
+xmousepasteblock &
 xfce4-clipman &			#clipboard manager
 blueman-applet &		#bluetooth
 dunst &					#notifications
 flameshot &				#screenshot tool
 compton -b &			#compositor
 sudo powertop --auto-tune & #power manager
+numlockx on &
+sxhkd &
 
 #actually start the DE/WM
 xrandr --auto
 case "$1" in
 	i3) exec i3;;
-	*) exec i3;; 
+	kde) exec startplasma-x11;;
+	*) exec i3;;
 esac
