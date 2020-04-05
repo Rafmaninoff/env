@@ -110,6 +110,7 @@ map <leader>p :!openout <c-r>%<CR><CR>
 "do certain stuff with certain files
 	au BufWritePost ~/.bmdirs,~/.bmfiles !shortcuts
 	au BufWritePost ~/.Xresources !xrdb ~/.Xresources
+	au BufWritePost ~/.config/sxhkd/sxhkdrc	!pkill -SIGUSR1 sxhkd
 
 "split movement
 	nnoremap <C-h> <C-w>h

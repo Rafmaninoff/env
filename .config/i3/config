@@ -12,6 +12,11 @@ set $term st
 #modifier is super key
 set $mod Mod4
 
+#restart i3 in place
+bindsym $mod+Escape reload
+bindsym $mod+Shift Escape reload
+
+
 #gaps/borders/whatever settings
 #don't draw borders or have gaps in workspaces with only one container
 smart_borders on

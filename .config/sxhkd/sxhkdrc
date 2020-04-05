@@ -10,14 +10,8 @@ super + control + space
 super + r
 	$TERMINAL -e $FILE
 
-#make sxhkd reload its own config file, additionally restart i3
-super + Escape
-	 pgrep -x i3 && i3-msg 'reload'; pkill -SIGUSR1 sxhkd
-super + shift + Escape
-	 pgrep -x i3 && i3-msg 'restart'; pkill -SIGUSR1 sxhkd
-
 #flameshot bind
-super + Print 
+super + Print
 	flameshot gui
 
 

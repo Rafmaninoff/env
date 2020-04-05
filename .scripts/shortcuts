@@ -10,7 +10,7 @@ shell_shortcuts="$HOME/.zsh/shortcuts.zsh"
 	printf "# vim: filetype=zsh\n" > "$shell_shortcuts"
 
 #format the bmdirs in the correct format and send it to the corresponding files
-sed "s/\s*#.*$//;/^\s*$/d" $bmdirs | awk '{print "\talias -g \""$1"\"=\"cd "$2"\""}' >> $shell_shortcuts
+sed "s/\s*#.*$//;/^\s*$/d" $bmdirs | tee >(awk '{print "\talias -g \""$1"\"=\"cd "$2"\""}' >> $shell_shortcuts) | awk '{print "alias \""p$1"\"=\"pushd "$2"\""}' >>$shell_shortcuts
 
 #format the bmfiles in the correct format and send it to the corresponding files
 sed "s/\s*#.*$//;/^\s*$/d" $bmfiles | awk '{print "\talias \"e"$1"\"=\"$EDITOR "$2"\""}' >> $shell_shortcuts
