@@ -1,0 +1,23 @@
+{
+	"suggest.triggerAfterInsertEnter": true,
+	"suggest.timeout": 2000,
+	"pairs.enableCharacters" : ["(", "[", "{", "'", "\""],
+	"suggest.snippetIndicator": "►s",
+
+
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+      "rootPatterns": [".ccls-root", "compile_commands.json"],
+      "initializationOptions": {
+        "cache": {
+          "directory": ".ccls-cache"
+        },
+        "client": {
+          "snippetSupport": true
+        }
+      }
+    }
+  }
+}
