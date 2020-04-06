@@ -14,7 +14,7 @@ set $mod Mod4
 
 #restart i3 in place
 bindsym $mod+Escape reload
-bindsym $mod+Shift Escape reload
+bindsym $mod+Shift Escape restart
 
 
 #gaps/borders/whatever settings

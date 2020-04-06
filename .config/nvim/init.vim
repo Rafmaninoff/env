@@ -1,4 +1,4 @@
-call plug#begin('~/.local/share/nvim/plugged')
+		call plug#begin('~/.local/share/nvim/plugged')
 
 "Aesthetic stuff
 	"fancy statusline and themes
@@ -14,7 +14,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 	Plug 'tpope/vim-surround'
 	"file browser
 	Plug 'scrooloose/nerdtree'
-		nnoremap <leader>a :NERDTreeToggle<cr>
 	"tmux integration
 	Plug 'christoomey/vim-tmux-navigator'
 	Plug 'junegunn/goyo.vim' "distraction-free writing in vim
@@ -33,7 +32,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 		let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
 		let g:UltiSnipsEditSplit = 'vertical'
 		let g:UltiSnipsEnableSnipMate = 0
-		let g:UltiSnipsSnippetDirectories=["/home/raf/.ultisnips"]
 		let g:UltiSnipsUsePythonVersion = 3
 		cmap use UltiSnipsEdit
 	Plug 'w0rp/ale'	"Linting engine and lsp client
@@ -86,6 +84,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 	nnoremap c "_c
 	set linebreak
 
+"Plugin configuration
+	"nerdtree
+		nnoremap <leader>a :NERDTreeToggle<cr>
 
 "copying and pasting from system clipboard.
 	 vnoremap <C-c> "+y

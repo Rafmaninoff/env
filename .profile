@@ -14,5 +14,3 @@ export FILE="ranger"
 	export RANGER_LOAD_DEFAULT_RC="FALSE"
 
 [[ -f ~/.secret_profile ]] && source ~/.secret_profile
-
-
