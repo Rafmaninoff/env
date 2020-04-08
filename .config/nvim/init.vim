@@ -65,6 +65,8 @@
 	set noshowmode 			" showing the mode is redundant with airline
 	set tabstop=4
 	set softtabstop=4
+	nnoremap j gj
+	nnoremap k gk
 	set shiftwidth=4
 	let mapleader = ","
 	let leader = ","
