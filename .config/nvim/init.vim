@@ -86,6 +86,13 @@
 	nnoremap c "_c
 	set linebreak
 
+"guide navigation
+	nnoremap <leader><space> /<+x+><CR>cf>
+	inoremap <leader><space> <Esc>/<+x+><CR>cf>
+	nnoremap <leader>i<space> a<+x+><Esc>
+	inoremap <leader>i<space> <+x+>
+
+
 "Plugin configuration
 	"nerdtree
 		nnoremap <leader>a :NERDTreeToggle<cr>
@@ -95,6 +102,7 @@
 	 nmap <C-w> "+P
 
 au BufWritePre * %s/\s\+$//e "delete trailing whitespace on write
+au BufWritePre * %s/\n\+\%$//e "delete newlines at the end of file on write
 
 "compile the file
 map <leader>c :w! \| !compiler <c-r>%<CR>
