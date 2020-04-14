@@ -1,29 +1,25 @@
-export PATH=/usr/lib/ccache/bin/:$PATH:~/bin:~/.scripts:~/.local/bin/:~/nativefied/launchers/
-
-#---# Nested directory helpers #---#
-abbrev-alias -g "..."="../.."
-abbrev-alias -g "...."="../../.."
-abbrev-alias -g "....."="../../../.."
-abbrev-alias -g "......"="../../../../.."
-abbrev-alias -g "......."="../../../../../.."
-abbrev-alias -g "........"="../../../../../../.."
-abbrev-alias -g "........."="../../../../../../../.."
-abbrev-alias -g ".........."="../../../../../../../../.."
-abbrev-alias -g "..........."="../../../../../../../../../.."
-abbrev-alias -g "............"="../../../../../../../../../../.."
-abbrev-alias -g "............."="../../../../../../../../../../../.."
-abbrev-alias -g ".............."="../../../../../../../../../../../../.."
-#-----------------------------------#
+alias -g "..."="../.."
+alias -g "...."="../../.."
+alias -g "....."="../../../.."
+alias -g "......"="../../../../.."
+alias -g "......."="../../../../../.."
+alias -g "........"="../../../../../../.."
+alias -g "........."="../../../../../../../.."
+alias -g ".........."="../../../../../../../../.."
+alias -g "..........."="../../../../../../../../../.."
+alias -g "............"="../../../../../../../../../../.."
+alias -g "............."="../../../../../../../../../../../.."
+alias -g ".............."="../../../../../../../../../../../../.."
 
 #---# Arch-Specific #---#
 if [[ -e /usr/bin/pacman ]]; then
 	alias -g pacman="sudo pacman"
 	alias powerpill="sudo powerpill"
-	abbrev-alias -g paci="pacman -S"
-	abbrev-alias -g pacq="pacman -Ss"
+	abbrev-alias -g paci="pikaur -S"
+	abbrev-alias -g pacq="pikaur -Ss"
+	abbrev-alias -g pacr="pacman -Rs"
 	alias update="sudo pacman -Sy && sudo powerpill -Su && pikaur -Syu && zplug update && nvim +PlugUpdate +qall"
 fi
-#-----------------------#
 
 #---# Ubuntu/Debian-Specific #---#
 if [[ -e /usr/bin/apt-get ]]; then
@@ -39,7 +35,6 @@ if [[ -e /usr/bin/apt-get ]]; then
              else alias update="sudo apt update && sudo apt upgrade && sudo apt autoremove && sudo apt autoclean"
 	 fi
 fi
-#------------------------#
 
 if [[ -e /usr/bin/snap ]]; then alias snap="sudo snap"; fi #snap alias
 
@@ -68,7 +63,8 @@ abbrev-alias S="sudo systemctl"
 abbrev-alias Su="systemctl --user"
 abbrev-alias -g -e di="$(pwd)/"
 alias config="/usr/bin/git --git-dir=$HOME/.env/ --work-tree=$HOME"
-#-------------------------#
+alias pd="pushd"
+alias Pd="popd"
 
 #---# CPU governor and power management #---#
 if [[ -e /usr/bin/cpupower ]]; then
@@ -81,7 +77,6 @@ if [[ -e /usr/bin/cpupower ]]; then
 if [[ -e /usr/sbin/powertop ]]; then
 	alias powertop="sudo powertop"
  fi
-#------------------------------#
 
 #---# Bumblebee-system specific #---#
 if [[ -e /usr/bin/optirun ]]; then
@@ -89,7 +84,6 @@ if [[ -e /usr/bin/optirun ]]; then
 	alias nvidia-smi="optirun nvidia-smi"
 	alias ivo="intel-virtual-output"
 	fi
-#-----------------------------------#
 
 #---# Nvidia-prime system specific #---#
 if [[ -e /usr/bin/nvidia-xrun  ]]; then
@@ -97,11 +91,6 @@ if [[ -e /usr/bin/nvidia-xrun  ]]; then
 	alias stxnv="nvidia-xrun"
 	alias stxnvm="export MAINBASE="true" && nvidia-xrun"
 fi
-#--------------------------------------#
-
-#---# Jewe's autoclicker #---#
-	[[ $DISPLAY ]] && alias rightclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 8 --btp Right"; alias leftclicker="autoclicker --mc true --mid $(xinput | grep -i "mx master" | head -n1 | cut -f2 | cut -d= -f2) --bid 9 --btp Left"
-#----------------------------#
 
 #passhole
 alias ph="ph --database /home/raf/Dropbox/keepass/passhole.kdbx"
