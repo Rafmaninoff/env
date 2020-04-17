@@ -20,6 +20,8 @@
 		nnoremap <F3>f :goyo<CR>
 	Plug 'vim-scripts/vim-auto-save'
 		let g:auto_save_silent = 1
+	Plug 'vim-scripts/restore_view.vim'
+		set viewoptions=cursor,folds,slash,unix
 "programming-related
 	"comment out with gc
 	Plug 'tpope/vim-commentary'
@@ -87,10 +89,10 @@
 	set linebreak
 
 "guide navigation
-	nnoremap <leader><space> /<+x+><CR>cf>
-	inoremap <leader><space> <Esc>/<+x+><CR>cf>
-	nnoremap <leader>i<space> a<+x+><Esc>
-	inoremap <leader>i<space> <+x+>
+	nnoremap <leader><leader><space> /<+x+><CR>cf>
+	inoremap <leader><leader><space> <Esc>/<+x+><CR>cf>
+	nnoremap <leader><leader>i<space> a<+x+><Esc>
+	inoremap <leader><leader>i<space> <+x+>
 
 
 "Plugin configuration
@@ -112,7 +114,7 @@ map <leader>p :!openout <c-r>%<CR><CR>
 "automatically make files containing shebang executable
 	fu MakeScriptsExecutable()
 		if getline(1) =~ "^#!"
-			silent !chmod u+x %:p
+			silent !chmod x %:p
 		endif
 	endfu
 
@@ -142,4 +144,3 @@ map <leader>p :!openout <c-r>%<CR><CR>
 	vnoremap <down> <nop>
 	vnoremap <left> <nop>
 	vnoremap <right> <nop>
-

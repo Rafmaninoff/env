@@ -121,7 +121,7 @@ snippet "ud" "\underline{}" rwA
 endsnippet
 
 snippet mk "inline math" wA
-$${1}$`p
+$${1:${VISUAL}}$`p
 if t[2] and t[2][0] not in [',','.','?','-',' ']:
 	snip.rv =' '
 else:
@@ -424,27 +424,27 @@ endsnippet
 
 context "math()"
 snippet NN "naturals" iA
-\N
+\mathbb{N}
 endsnippet
 
 context "math()"
 snippet RR "reals" iA
-\R
+\mathbb{R}
 endsnippet
 
 context "math()"
 snippet QQ "quotients" iA
-\Q
+\mathbb{Q}
 endsnippet
 
 context "math()"
 snippet ZZ "wholes" iA
-\Z
+\mathbb{Z}
 endsnippet
 
 context "math()"
 snippet CC "complex" iA
-\C
+\mathbb{C}
 endsnippet
 
 context "math()"
