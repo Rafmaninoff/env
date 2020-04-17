@@ -14,3 +14,4 @@ nbc	~/.config/newsboat/config
 xr	~/.Xresources
 xp	~/.xprofile
 xrc ~/.initrc
+xcomp ~/.XCompose
