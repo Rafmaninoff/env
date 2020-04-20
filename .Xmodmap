@@ -6,7 +6,7 @@ clear mod3
 clear mod4
 clear mod5
 
-keycode 9  = NoSymbol Caps_Lock  NoSymbol NoSymbol NoSymbol
+keycode 9  = Escape Caps_Lock  NoSymbol NoSymbol NoSymbol
 keycode 23 = Escape NoSymbol Escape NoSymbol Escape
 keycode 37 = Tab ISO_Left_Tab Tab ISO_Left_Tab Tab ISO_Left_Tab
 

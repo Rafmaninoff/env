@@ -98,6 +98,8 @@
 "Plugin configuration
 	"nerdtree
 		nnoremap <leader>a :NERDTreeToggle<cr>
+	"coc.nvim
+		nmap <leader>rn <Plug>(coc-rename)
 
 "copying and pasting from system clipboard.
 	 vnoremap <C-c> "+y

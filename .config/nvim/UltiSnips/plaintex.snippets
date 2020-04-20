@@ -263,7 +263,7 @@ endsnippet
 
 context "math()"
 snippet absv "absolute value" iA
-\left\lvert ${1:${VISUAL}} \right\rvert $0
+\left| ${1:${VISUAL}} \right| $0
 endsnippet
 
 context "math()"
@@ -509,4 +509,9 @@ endsnippet
 context "math()"
 snippet tt "text" b
 \\text{${1:${VISUAL}}} $0
+endsnippet
+
+context "math()"
+snippet underbrace "underbrace" wA
+\underbrace{${1:${VISUAL}}}_{$2} $0
 endsnippet
