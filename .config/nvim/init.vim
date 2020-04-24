@@ -128,10 +128,18 @@ map <leader>p :!openout <c-r>%<CR><CR>
 	au BufWritePost ~/.config/sxhkd/sxhkdrc	!pkill -SIGUSR1 sxhkd
 
 "split movement
+	cmap tsp :sp +te
+	cmap vts :vs +te
 	nnoremap <C-h> <C-w>h
 	nnoremap <C-j> <C-w>j
 	nnoremap <C-k> <C-w>k
 	nnoremap <C-l> <C-w>l
+	nnoremap <M-x> <C-w>x
+	nnoremap <M-r> <C-w>r
+	nnoremap <M-h> <C-w>H
+	nnoremap <M-j> <C-w>J
+	nnoremap <M-k> <C-w>K
+	nnoremap <M-l> <C-w>L
 
 "block arrow keys to force me to not use them
 	nnoremap <up> <nop>
