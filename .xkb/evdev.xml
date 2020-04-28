@@ -4259,6 +4259,12 @@
             <description>Russian (phonetic French)</description>
           </configItem>
         </variant>
+        <variant>
+          <configItem>
+            <name>rafkbdvpon-ru</name>
+            <description>Raf's Programmer Dvorak keyboard with Russian, Ukrainian and Belarusian</description>
+          </configItem>
+        </variant>
       </variantList>
     </layout>
     <layout>
@@ -4491,6 +4497,15 @@
 	    <description>Cyrillic phonetic Dvorak (Raf's)</description>
             <languageList>
               <iso639Id>ru</iso639Id>
+            </languageList>
+          </configItem>
+        </variant>
+        <variant>
+          <configItem>
+            <name>rafkbdvpon-numbershift</name>
+	    <description>raf's programmer dvorak with ordered numbers shifted one to the left</description>
+            <languageList>
+              <iso639Id>cat</iso639Id>
             </languageList>
           </configItem>
         </variant>

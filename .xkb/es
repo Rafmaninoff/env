@@ -509,8 +509,6 @@ include "compose(102)"
 include "level3(ralt_switch)"
 };
 
-
-
 partial alphanumeric_keys
 xkb_symbols "cyrillicrafsymprogdv" {
 
@@ -635,6 +633,69 @@ key <AB10> { [z, Z, U300D, U300F] };
 include "compose(102)"
 include "level3(ralt_switch)"
 };
+
+partial alphanumeric_keys
+xkb_symbols "rafkbdvpon-numbershift" {
+
+//first row
+key <TLDE> { [dollar, asciitilde, masculine, ordfeminine] };
+key <AE01> { [ampersand, 1, notsign, NoSymbol] };
+key <AE02> { [bracketleft, 2, currency, NoSymbol] };
+key <AE03> { [braceleft, 3, cent, NoSymbol] };
+key <AE04> { [braceright, 4, yen, NoSymbol] };
+key <AE05> { [parenleft, 5, EuroSign, NoSymbol] };
+key <AE06> { [equal, 6, sterling, NoSymbol] };
+key <AE07> { [asterisk, 7, NoSymbol, NoSymbol] };
+key <AE08> { [parenright, 8, NoSymbol, NoSymbol] };
+key <AE09> { [plus, 9, NoSymbol, NoSymbol] };
+key <AE10> { [bracketright, 0, NoSymbol, NoSymbol] };
+key <AE11> { [exclam, percent, NoSymbol, NoSymbol] };
+key <AE12> { [numbersign, grave, NoSymbol, NoSymbol] };
+
+//second row
+key <AD01> { [semicolon, colon, diaeresis, NoSymbol] };
+key <AD02> { [comma, less, guillemotleft, U2039] };
+key <AD03> { [period, greater, guillemotright, U203A] };
+key <AD04> { [p, P, thorn, THORN] };
+key <AD05> { [y, Y, backslash, bar] };
+key <AD06> { [f, F, UFDFA, NoSymbol] };
+key <AD07> { [g, G, NoSymbol, NoSymbol] };
+key <AD08> { [c, C, uparrow, NoSymbol] };
+key <AD09> { [r, R, paragraph, registered] };
+key <AD10> { [l, L, XF86LaunchA, XF86LauchB] };
+key <AD11> { [slash, question, NoSymbol, NoSymbol] };
+key <AD12> { [at, asciicircum, caron, breve] };
+
+//third row
+key <AC01> { [a, A, ae, AE] };
+key <AC02> { [o, O, oe, OE] };
+key <AC03> { [e, E, NoSymbol, NoSymbol] };
+key <AC04> { [u, U, oslash, Oslash] };
+key <AC05> { [i, I, idotless, Iabvoedot] };
+key <AC06> { [d, D, eth, ETH] };
+key <AC07> { [h, H, leftarrow, NoSymbol] };
+key <AC08> { [t, T, downarrow, NoSymbol] };
+key <AC09> { [n, N, rightarrow, NoSymbol] };
+key <AC10> { [s, S, ssharp, NoSymbol] };
+key <AC11> { [minus, underscore, emdash, endash] };
+key <BKSL> { [backslash, bar, NoSymbol, NoSymbol] };
+
+//Fourth row
+key <AB01> { [apostrophe, quotedbl, acute, doubleacute] };
+key <AB02> { [q, Q, omega, OMEGA] };
+key <AB03> { [j, J, doublelowquotemark, singlelowquotemark] };
+key <AB04> { [k, K, leftdoublequotemark, leftsinglequotemark] };
+key <AB05> { [x, X, rightdoublequotemark, rightsinglequotemark] };
+key <AB06> { [b, B, U2039, U203A] };
+key <AB07> { [m, M, mu, U262D] };
+key <AB08> { [w, W, lstroke, Lstroke] };
+key <AB09> { [v, V,  U300C, U300E] };
+key <AB10> { [z, Z, U300D, U300F] };
+
+include "compose(102)"
+include "level3(ralt_switch)"
+};
+
 
 // EXTRAS:
 
