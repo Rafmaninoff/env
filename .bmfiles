@@ -15,3 +15,4 @@ xr	~/.Xresources
 xp	~/.xprofile
 xrc ~/.initrc
 xcomp ~/.XCompose
+aly	~/.config/alacritty/alacritty.yml
