@@ -16,6 +16,9 @@ super + r
 super + Print
 	flameshot gui
 
+XF86MonBrightness{Up,Down}
+	light -{A,U} 1 && pkill -SIGRTMIN+12 i3blocks
+
 
 #passhole password manager interface
 super + p
