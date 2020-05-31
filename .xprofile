@@ -1,9 +1,9 @@
 #!/usr/bin/env sh
-setxkbmap -layout es -variant rafkbdvpon -option ctrl:swapcaps -option compose:menu  #keyboard options
+setxkbmap -layout es -variant rafkbqw -option ctrl:swapcaps -option compose:menu  #keyboard options
 
 #fcitx block
-export GTK_IM_MODULE=fcitx 
-export QT_IM_MODULE=fcitx 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_QPA_PLATFORMTHEME="qt5ct"
 fcitx &
