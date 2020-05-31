@@ -697,6 +697,68 @@ include "level3(ralt_switch)"
 };
 
 
+partial alphanumeric_keys
+xkb_symbols "rafkbqw" {
+
+//first row
+key <TLDE> { [dollar, asciitilde, masculine, ordfeminine] };
+key <AE01> { [ampersand, 1, notsign, NoSymbol] };
+key <AE02> { [bracketleft, 2, currency, NoSymbol] };
+key <AE03> { [braceleft, 3, cent, NoSymbol] };
+key <AE04> { [braceright, 4, yen, NoSymbol] };
+key <AE05> { [parenleft, 5, EuroSign, NoSymbol] };
+key <AE06> { [equal, 6, sterling, NoSymbol] };
+key <AE07> { [asterisk, 7, NoSymbol, NoSymbol] };
+key <AE08> { [parenright, 8, NoSymbol, NoSymbol] };
+key <AE09> { [plus, 9, NoSymbol, NoSymbol] };
+key <AE10> { [bracketright, 0, NoSymbol, NoSymbol] };
+key <AE11> { [exclam, percent, NoSymbol, NoSymbol] };
+key <AE12> { [numbersign, grave, NoSymbol, NoSymbol] };
+
+//second row
+key <AD01> { [q, Q, omega, OMEGA] };
+key <AD02> { [w, W, lstroke, lstroke] };
+key <AD03> { [e, E, NoSymbol, NoSymbol] };
+key <AD04> { [r, R, paragraph, registered] };
+key <AD05> { [t, T, NoSymbol, NoSymbol] };
+key <AD06> { [y, Y, NoSymbol, NoSymbol] };
+key <AD07> { [u, U, oslash, Oslash] };
+key <AD08> { [i, I, idotless, Iabvoedot] };
+key <AD09> { [o, O, oe, OE] };
+key <AD10> { [p, P, thorn, THORN] };
+key <AD11> { [slash, question, NoSymbol, NoSymbol] };
+key <AD12> { [at, asciicircum, caron, breve] };
+
+//third row
+key <AC01> { [a, A, ae, AE] };
+key <AC02> { [s, S, ssharp, NoSymbol] };
+key <AC03> { [d, D, eth, ETH] };
+key <AC04> { [f, F, UFDFA, NoSymbol] };
+key <AC05> { [g, G, NoSymbol, NoSymbol] };
+key <AC06> { [h, H, NoSymbol, NoSymbol] };
+key <AC07> { [j, J, NoSymbol, NoSymbol] };
+key <AC08> { [k, K, NoSymbol, NoSymbol] };
+key <AC09> { [l, L, NoSymbol, NoSymbol] };
+key <AC10> { [minus, underscore, emdash, endash] };
+key <AC11> { [apostrophe, quotedbl, acute, doubleacute] };
+key <BKSL> { [backslash, bar, NoSymbol, NoSymbol] };
+
+//Fourth row
+key <AB01> { [z, Z, NoSymbol, NoSymbol] };
+key <AB02> { [x, X, doublelowquotemark, singlelowquotemark] };
+key <AB03> { [c, C, leftdoublequotemark, leftsinglequotemark] };
+key <AB04> { [v, V, rightdoublequotemark, rightsinglequotemark] };
+key <AB05> { [b, B, rightdoublequotemark, rightsinglequotemark] };
+key <AB06> { [n, N, NoSymbol, NoSymbol] };
+key <AB07> { [m, M, mu, U262D] };
+key <AB08> { [comma, less, guillemotright, U2039] };
+key <AB09> { [period, greater,  guillemotright, U203A] };
+key <AB10> { [semicolon, colon, diaeresis, NoSymbol] };
+
+include "compose(102)"
+include "level3(ralt_switch)"
+};
+
 // EXTRAS:
 
 partial alphanumeric_keys
