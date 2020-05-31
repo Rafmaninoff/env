@@ -18,12 +18,12 @@ def math():
 endglobal
 
 global !p
-d = {"]":"[","\}":"\{",")":"(",">":"<","|":"|"}
+d = {"]":"[","\}":"\{",")":"(",">":"<","|":"|","lfloor":"rfloor","lceil":"rceil"}
 def getLeftBracket(rbracket):
 	return d.get(rbracket)
 endglobal
 
-snippet "template" "basic template" rb
+snippet template "basic template" b
 \documentclass[12pt, a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[UKenglish]{babel}
@@ -46,7 +46,7 @@ snippet beg "begin" wA
 \end{$1}
 endsnippet
 
-snippet "enum" "Enumerate" rbA
+snippet num "Enumerate" bA
 \begin{enumerate}
 	\item $0
 \end{enumerate}
@@ -104,19 +104,19 @@ ${0:${VISUAL}}
 % { end subsubsection: $1 }
 endsnippet
 
-snippet "bf" "\textbf{}" rwA
+snippet bf "\textbf{}" wA
 \textbf{${1:${VISUAL}}}
 endsnippet
 
-snippet "emf" "\emph{}" rwA
+snippet emf "\emph{}" wA
 \emph{${1:${VISUAL}}}
 endsnippet
 
-snippet "ital" "\textit{}" rwA
+snippet ital "\textit{}" wA
 \textit{${1:${VISUAL}}}
 endsnippet
 
-snippet "ud" "\underline{}" rwA
+snippet ud "\underline{}" wA
 \underline{${1:${VISUAL}}}
 endsnippet
 
@@ -349,12 +349,37 @@ endsnippet
 
 context "math()"
 snippet dint "definite integral" wA
-\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}\,d${4:x}$0
+\int_{${1:-\infty}}^{${2:\infty}} ${3:${VISUAL}}$0
 endsnippet
 
 context "math()"
 snippet uint "indefinite integral" wA
-\int ${1:${VISUAL}} d${2:x} $0
+\int ${1:${VISUAL}} d$0
+endsnippet
+
+context "math()"
+snippet diint "double integral" wA
+\iint_{${1:D}}$0
+endsnippet
+
+context "math()"
+snippet diiint "triple integral" wA
+\iiint_{${1:D}}${2:${VISUAL}}$0
+endsnippet
+
+context "math()"
+snippet didotsint "dots integral" wA
+\idotsint_{${1:D}}${2:${VISUAL}}$0
+endsnippet
+
+context "math()"
+snippet 2itrint "double iterated integral" wA
+\int_{${1:}}^{${2:}}\int_{${3:}}^{${4:}} ${5:${VISUAL}}$0
+endsnippet
+
+context "math()"
+snippet 3itrint "triple iterated intergal" b
+\int_{${1:}}^{${2:}}\int_{${3:}}^{${4:}}\int_{${5:}}^{${6:}} ${7:${VISUAL}}$0
 endsnippet
 
 context "math()"
@@ -507,7 +532,7 @@ snippet qed "QEDSquare" wA
 endsnippet
 
 context "math()"
-snippet tt "text" b
+snippet tt "text" wA
 \\text{${1:${VISUAL}}} $0
 endsnippet
 
